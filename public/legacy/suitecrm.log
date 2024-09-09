@@ -1,0 +1,22 @@
+Wed Sep  4 17:40:56 2024 [30148][1][SECURITY] OutboundEmail::checkSavePermissions - not logged in - skipping check
+Wed Sep  4 17:40:56 2024 [30148][1][FATAL] User update error: Temp User is not retrieved at ID 1, boolean given
+Wed Sep  4 17:40:56 2024 [30148][1][FATAL] Email address save error
+Wed Sep  4 17:41:03 2024 [30148][1][FATAL] User update error: Temp User is not retrieved at ID seed_jim_id, boolean given
+Wed Sep  4 17:41:03 2024 [30148][1][FATAL] Email address save error
+Wed Sep  4 17:41:03 2024 [30148][1][FATAL] User update error: Temp User is not retrieved at ID seed_sarah_id, boolean given
+Wed Sep  4 17:41:03 2024 [30148][1][FATAL] Email address save error
+Wed Sep  4 17:41:03 2024 [30148][1][FATAL] User update error: Temp User is not retrieved at ID seed_sally_id, boolean given
+Wed Sep  4 17:41:03 2024 [30148][1][FATAL] Email address save error
+Wed Sep  4 17:41:03 2024 [30148][1][FATAL] User update error: Temp User is not retrieved at ID seed_max_id, boolean given
+Wed Sep  4 17:41:03 2024 [30148][1][FATAL] Email address save error
+Wed Sep  4 17:41:03 2024 [30148][1][FATAL] User update error: Temp User is not retrieved at ID seed_will_id, boolean given
+Wed Sep  4 17:41:03 2024 [30148][1][FATAL] Email address save error
+Wed Sep  4 17:41:04 2024 [30148][1][FATAL] User update error: Temp User is not retrieved at ID seed_chris_id, boolean given
+Wed Sep  4 17:41:04 2024 [30148][1][FATAL] Email address save error
+Wed Sep  4 17:41:23 2024 [30148][1][SECURITY] Invalid ext  logger_file_ext : ''.
+Wed Sep  4 17:41:23 2024 [30148][1][SECURITY] Setting logger_file_ext to '.log'.
+Wed Sep  4 17:41:23 2024 [30148][1][SECURITY] Setting logger_file_name to ''.
+Wed Sep  4 17:41:23 2024 [30148][1][SECURITY] Log file extension can't be blank.
+Wed Sep  4 17:41:23 2024 [30148][1][SECURITY] Setting logger_file_name to ''.
+Wed Sep  4 17:41:23 2024 [30148][1][SECURITY] Log file extension can't be blank.
+Wed Sep  4 18:07:01 2024 [30148][1][FATAL] Email address save error
