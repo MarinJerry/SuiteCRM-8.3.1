@@ -1,5 +1,5 @@
 <?php
-// created: 2024-09-09 17:54:18
+// created: 2024-09-09 21:10:20
 $mod_strings = array (
   'LBL_ID' => 'ID',
   'LBL_DATE_ENTERED' => 'Date Created:',
@@ -104,4 +104,5 @@ $mod_strings = array (
   'LBL_CONTACT_CREATED_BY' => 'Created by',
   'LBL_CASE_UPDATE_FORM' => 'Updates - Attachment form',
   'LBL_UNKNOWN_CONTACT' => 'Unknown Contact',
+  'LBL_PHOTO' => 'photo',
 );

@@ -67,7 +67,7 @@ parameters:
     cases:
       index: true
       list: true
-      record: true
+      record: false
     project:
       index: true
       list: true
