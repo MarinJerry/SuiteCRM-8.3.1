@@ -1,0 +1,38 @@
+<?php
+// created: 2024-09-09 19:50:33
+$mod_strings = array (
+  'LBL_MODULE_NAME' => 'Divisas',
+  'LBL_LIST_FORM_TITLE' => 'Divisas',
+  'LBL_CURRENCY' => 'Divisa',
+  'LBL_ADD' => 'Agregar',
+  'LBL_MERGE' => 'Combinar',
+  'LBL_MERGE_TXT' => 'Por favor, seleccione las monedas que desee asociar a la moneda seleccionada. Esto eliminará todas las monedas marcadas y reasignará cualquier valor asociado con ellas a la moneda seleccionada.',
+  'LBL_US_DOLLAR' => 'Dólar de los E.E.U.U',
+  'LBL_DELETE' => 'Eliminar',
+  'LBL_LIST_SYMBOL' => 'Símbolo de Divisa',
+  'LBL_LIST_NAME' => 'Nombre de la divisa',
+  'LBL_LIST_ISO4217' => 'Código ISO 4217',
+  'LBL_LIST_ISO4217_HELP' => 'Introduzca el código de tres letras ISO 4217 que define el nombre y el símbolo de la moneda.',
+  'LBL_UPDATE' => 'Actualizar',
+  'LBL_LIST_RATE' => 'Tasa de conversión',
+  'LBL_LIST_RATE_HELP' => 'Una tasa de conversión de 0.5 para el Euro significa que 10 USD = 5 euros.',
+  'LBL_LIST_STATUS' => 'Estado',
+  'LNK_NEW_CONTACT' => 'Nuevo contacto',
+  'LNK_NEW_ACCOUNT' => 'Nueva cuenta',
+  'LNK_NEW_OPPORTUNITY' => 'Nueva oportunidad',
+  'LNK_NEW_CASE' => 'Nuevo caso',
+  'LNK_NEW_NOTE' => 'Nueva nota o archivo adjunto',
+  'LNK_NEW_CALL' => 'Nueva Llamada',
+  'LNK_NEW_EMAIL' => 'Nuevo Email',
+  'LNK_NEW_MEETING' => 'Nueva Reunión',
+  'LNK_NEW_TASK' => 'Nueva tarea',
+  'NTC_DELETE_CONFIRMATION' => '¿Está seguro de que desea eliminar esta moneda? Todo registro que use esta moneda será convertido a la moneda por defecto del sistema cuando sea accedido. Sería mejor dejarla inactiva.',
+  'LBL_BELOW_MIN' => 'El ratio de conversión debe ser mayor que 0',
+  'currency_status_dom' => 
+  array (
+    'Active' => 'Activa',
+    'Inactive' => 'Inactiva',
+  ),
+  'LBL_CREATED_BY' => 'Creado por',
+  'LBL_EDIT_LAYOUT' => 'Editar diseño',
+);
