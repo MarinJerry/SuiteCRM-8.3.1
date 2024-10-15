@@ -42,6 +42,11 @@ array (
           'newTab' => false,
           'panelDefault' => 'expanded',
         ),
+        'LBL_EDITVIEW_PANEL1' => 
+        array (
+          'newTab' => false,
+          'panelDefault' => 'expanded',
+        ),
       ),
       'form' => 
       array (
@@ -55,13 +60,18 @@ array (
       array (
         0 => 
         array (
+          0 => '',
+          1 => '',
+        ),
+        1 => 
+        array (
           0 => 
           array (
             'name' => 'numero_identidad_c',
             'label' => 'LBL_NUMERO_IDENTIDAD_C',
           ),
         ),
-        1 => 
+        2 => 
         array (
           0 => 
           array (
@@ -70,7 +80,7 @@ array (
           ),
           1 => 'priority',
         ),
-        2 => 
+        3 => 
         array (
           0 => 
           array (
@@ -78,14 +88,13 @@ array (
             'comment' => 'The state of the case (i.e. open/closed)',
             'label' => 'LBL_STATE',
           ),
-          1 => 'status',
         ),
-        3 => 
+        4 => 
         array (
           0 => 'type',
           1 => 'account_name',
         ),
-        4 => 
+        5 => 
         array (
           0 => 
           array (
@@ -100,22 +109,19 @@ array (
             'label' => 'LBL_SUGGESTION_BOX',
           ),
         ),
-        5 => 
+        6 => 
         array (
           0 => 
           array (
             'name' => 'description',
           ),
         ),
-        6 => 
-        array (
-          0 => 
-          array (
-            'name' => 'resolution',
-            'nl2br' => true,
-          ),
-        ),
         7 => 
+        array (
+          0 => '',
+          1 => '',
+        ),
+        8 => 
         array (
           0 => 
           array (
@@ -124,7 +130,7 @@ array (
             'label' => 'LBL_CASE_ATTACHMENTS_DISPLAY',
           ),
         ),
-        8 => 
+        9 => 
         array (
           0 => 
           array (
@@ -133,7 +139,7 @@ array (
             'label' => 'LBL_UPDATE_TEXT',
           ),
         ),
-        9 => 
+        10 => 
         array (
           0 => 
           array (
@@ -142,7 +148,7 @@ array (
             'label' => 'LBL_PHOTO',
           ),
         ),
-        10 => 
+        11 => 
         array (
           0 => 
           array (
@@ -151,7 +157,7 @@ array (
             'label' => 'LBL_INTERNAL',
           ),
         ),
-        11 => 
+        12 => 
         array (
           0 => 
           array (
@@ -159,9 +165,36 @@ array (
             'studio' => 'visible',
           ),
         ),
-        12 => 
+        13 => 
         array (
           0 => 'assigned_user_name',
+        ),
+      ),
+      'lbl_editview_panel1' => 
+      array (
+        0 => 
+        array (
+          0 => 'status',
+          1 => 
+          array (
+            'name' => 'resolution',
+            'nl2br' => true,
+          ),
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            'name' => 'adjunto_resolution_01_c',
+            'studio' => 'visible',
+            'label' => 'LBL_ADJUNTO_RESOLUTION_01',
+          ),
+          1 => 
+          array (
+            'name' => 'adjunto_resolution_02_c',
+            'studio' => 'visible',
+            'label' => 'LBL_ADJUNTO_RESOLUTION_02',
+          ),
         ),
       ),
     ),

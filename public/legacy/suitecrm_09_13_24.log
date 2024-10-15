@@ -1,0 +1,5 @@
+Fri Sep 13 17:12:15 2024 [10640][1][FATAL] Exception handling in C:\laragon\www\SuiteCRM-8.3.1\public\legacy\include\MVC\Controller\SugarController.php:397
+Fri Sep 13 17:12:15 2024 [10640][1][FATAL] Exception in Controller: Error: El campo ya existe
+Fri Sep 13 18:06:44 2024 [10640][1][FATAL] Image Field : Not a Valid Image.
+Fri Sep 13 18:07:33 2024 [10640][1][FATAL] Exception handling in C:\laragon\www\SuiteCRM-8.3.1\public\legacy\include\MVC\Controller\SugarController.php:397
+Fri Sep 13 18:07:33 2024 [10640][1][FATAL] Exception in Controller: Subpanel was not defined

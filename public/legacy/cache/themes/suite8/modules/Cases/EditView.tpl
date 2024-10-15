@@ -90,6 +90,19 @@
 
 
 
+<div class="col-xs-12 col-sm-6 edit-view-row-item edit-view-bordered" data-field="">
+</div>
+
+
+<div class="col-xs-12 col-sm-6 edit-view-row-item edit-view-bordered" data-field="">
+</div>
+<div class="clear"></div>
+<div class="clear"></div>
+</div>
+<div class="row edit-view-row">
+
+
+
 <div class="col-xs-12 col-sm-12 edit-view-row-item" data-field="numero_identidad_c">
 
 
@@ -191,10 +204,10 @@ title=''
 
 
 
-<div class="col-xs-12 col-sm-6 edit-view-row-item edit-view-bordered" data-field="state">
+<div class="col-xs-12 col-sm-12 edit-view-row-item" data-field="state">
 
 
-<div class="col-xs-12 col-sm-4 label" data-label="LBL_STATE">
+<div class="col-xs-12 col-sm-2 label" data-label="LBL_STATE">
 
 {minify}
 {capture name="label" assign="label"}{sugar_translate label='LBL_STATE' module='Cases'}{/capture}
@@ -203,7 +216,7 @@ title=''
 {/minify}
 </div>
 
-<div class="col-xs-12 col-sm-8 edit-view-field " type="enum" field="state"  >
+<div class="col-xs-12 col-sm-8 edit-view-field " type="enum" field="state" colspan='3' >
 {counter name="panelFieldCount" print=false}
 
 <select name="{$fields.state.name}"
@@ -221,46 +234,6 @@ title=''
 
 <!-- [/hide] -->
 </div>
-
-
-<div class="col-xs-12 col-sm-6 edit-view-row-item edit-view-bordered" data-field="status">
-
-
-<div class="col-xs-12 col-sm-4 label" data-label="LBL_STATUS">
-
-{minify}
-{capture name="label" assign="label"}{sugar_translate label='LBL_STATUS' module='Cases'}{/capture}
-{$label|strip_semicolon}:
-
-{/minify}
-</div>
-
-<div class="col-xs-12 col-sm-8 edit-view-field " type="dynamicenum" field="status"  >
-{counter name="panelFieldCount" print=false}
-
-<script type="text/javascript" src='{sugar_getjspath file="include/SugarFields/Fields/Dynamicenum/SugarFieldDynamicenum.js"}'></script>
-<select name="{$fields.status.name}"
-id="{$fields.status.name}"
-title=''           
->
-{if isset($fields.status.value) && $fields.status.value != ''}
-{html_options options=$fields.status.options selected=$fields.status.value}
-{else}
-{html_options options=$fields.status.options selected=$fields.status.default}
-{/if}
-</select>
-<script type="text/javascript">
-    if(typeof de_entries == 'undefined'){literal}{var de_entries = new Array;}{/literal}
-    var el = document.getElementById("state");
-    addLoadEvent(function(){literal}{loadDynamicEnum({/literal}"state","{$fields.status.name}"{literal})}{/literal});
-    if (SUGAR.ajaxUI && SUGAR.ajaxUI.hist_loaded) {literal}{loadDynamicEnum({/literal}"state","{$fields.status.name}"{literal})}{/literal}
-</script>
-</div>
-<div class="edit-dotted-border"></div>
-
-<!-- [/hide] -->
-</div>
-<div class="clear"></div>
 <div class="clear"></div>
 </div>
 <div class="row edit-view-row">
@@ -446,7 +419,7 @@ maxlength='255'        value='{$value}' title=''      >
     cols="80"
     title='' tabindex="0" 
      >{$value}</textarea>
-{literal}<script type="text/javascript"  src="include/javascript/tiny_mce/tiny_mce.js?v=tTJJSMpksQF2-QyqVf4b2Q"></script>
+{literal}<script type="text/javascript"  src="include/javascript/tiny_mce/tiny_mce.js?v=efcxeTFrvOwF_p60Kdbgng"></script>
 <script type="text/javascript">
 <!--
 $(document).ready(function(){
@@ -482,37 +455,13 @@ function load_mce_description(){
 
 
 
-<div class="col-xs-12 col-sm-12 edit-view-row-item" data-field="resolution">
-
-
-<div class="col-xs-12 col-sm-2 label" data-label="LBL_RESOLUTION">
-
-{minify}
-{capture name="label" assign="label"}{sugar_translate label='LBL_RESOLUTION' module='Cases'}{/capture}
-{$label|strip_semicolon}:
-
-{/minify}
+<div class="col-xs-12 col-sm-6 edit-view-row-item edit-view-bordered" data-field="">
 </div>
 
-<div class="col-xs-12 col-sm-8 edit-view-field " type="text" field="resolution" colspan='3' >
-{counter name="panelFieldCount" print=false}
 
-{if empty($fields.resolution.value)}
-{assign var="value" value=$fields.resolution.default_value }
-{else}
-{assign var="value" value=$fields.resolution.value }
-{/if}
-<textarea  id='{$fields.resolution.name}' name='{$fields.resolution.name}'
-    rows="6"
-    cols="80"
-    title='' tabindex="0" 
-     >{$value}</textarea>
-{literal}{/literal}
+<div class="col-xs-12 col-sm-6 edit-view-row-item edit-view-bordered" data-field="">
 </div>
-<div class="edit-dotted-border"></div>
-
-<!-- [/hide] -->
-</div>
+<div class="clear"></div>
 <div class="clear"></div>
 </div>
 <div class="row edit-view-row">
@@ -571,7 +520,7 @@ function load_mce_description(){
     cols="80"
     title='' tabindex="0" 
      >{$value}</textarea>
-{literal}<script type="text/javascript"  src="include/javascript/tiny_mce/tiny_mce.js?v=tTJJSMpksQF2-QyqVf4b2Q"></script>
+{literal}<script type="text/javascript"  src="include/javascript/tiny_mce/tiny_mce.js?v=efcxeTFrvOwF_p60Kdbgng"></script>
 <script type="text/javascript">
 <!--
 $(document).ready(function(){
@@ -631,7 +580,7 @@ function load_mce_update_text(){
     });
 {/literal}
 </script>
-<script type="text/javascript" src='include/SugarFields/Fields/Image/SugarFieldFile.js?v=tTJJSMpksQF2-QyqVf4b2Q'></script>
+<script type="text/javascript" src='include/SugarFields/Fields/Image/SugarFieldFile.js?v=efcxeTFrvOwF_p60Kdbgng'></script>
 {if !empty($fields.photo_c.value) }
 {assign var=showRemove value=true}
 {else}
@@ -791,6 +740,232 @@ SUGAR.util.doWhen(
 </div>
 </div>
 </div>
+
+
+
+
+<div class="panel panel-default">
+<div class="panel-heading ">
+<a class="" role="button" data-toggle="collapse-edit" aria-expanded="false">
+<div class="col-xs-10 col-sm-11 col-md-11">
+{sugar_translate label='LBL_EDITVIEW_PANEL1' module='Cases'}
+</div>
+</a>
+</div>
+<div class="panel-body panel-collapse collapse in panelContainer" id="detailpanel_0" data-id="LBL_EDITVIEW_PANEL1">
+<div class="tab-content">
+<!-- tab_panel_content.tpl -->
+<div class="row edit-view-row">
+
+
+
+<div class="col-xs-12 col-sm-6 edit-view-row-item edit-view-bordered" data-field="status">
+
+
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_STATUS">
+
+{minify}
+{capture name="label" assign="label"}{sugar_translate label='LBL_STATUS' module='Cases'}{/capture}
+{$label|strip_semicolon}:
+
+{/minify}
+</div>
+
+<div class="col-xs-12 col-sm-8 edit-view-field " type="dynamicenum" field="status"  >
+{counter name="panelFieldCount" print=false}
+
+<script type="text/javascript" src='{sugar_getjspath file="include/SugarFields/Fields/Dynamicenum/SugarFieldDynamicenum.js"}'></script>
+<select name="{$fields.status.name}"
+id="{$fields.status.name}"
+title=''           
+>
+{if isset($fields.status.value) && $fields.status.value != ''}
+{html_options options=$fields.status.options selected=$fields.status.value}
+{else}
+{html_options options=$fields.status.options selected=$fields.status.default}
+{/if}
+</select>
+<script type="text/javascript">
+    if(typeof de_entries == 'undefined'){literal}{var de_entries = new Array;}{/literal}
+    var el = document.getElementById("state");
+    addLoadEvent(function(){literal}{loadDynamicEnum({/literal}"state","{$fields.status.name}"{literal})}{/literal});
+    if (SUGAR.ajaxUI && SUGAR.ajaxUI.hist_loaded) {literal}{loadDynamicEnum({/literal}"state","{$fields.status.name}"{literal})}{/literal}
+</script>
+</div>
+<div class="edit-dotted-border"></div>
+
+<!-- [/hide] -->
+</div>
+
+
+<div class="col-xs-12 col-sm-6 edit-view-row-item edit-view-bordered" data-field="resolution">
+
+
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_RESOLUTION">
+
+{minify}
+{capture name="label" assign="label"}{sugar_translate label='LBL_RESOLUTION' module='Cases'}{/capture}
+{$label|strip_semicolon}:
+
+{/minify}
+</div>
+
+<div class="col-xs-12 col-sm-8 edit-view-field " type="text" field="resolution"  >
+{counter name="panelFieldCount" print=false}
+
+{if empty($fields.resolution.value)}
+{assign var="value" value=$fields.resolution.default_value }
+{else}
+{assign var="value" value=$fields.resolution.value }
+{/if}
+<textarea  id='{$fields.resolution.name}' name='{$fields.resolution.name}'
+    rows="6"
+    cols="80"
+    title='' tabindex="0" 
+     >{$value}</textarea>
+{literal}{/literal}
+</div>
+<div class="edit-dotted-border"></div>
+
+<!-- [/hide] -->
+</div>
+<div class="clear"></div>
+<div class="clear"></div>
+</div>
+<div class="row edit-view-row">
+
+
+
+<div class="col-xs-12 col-sm-6 edit-view-row-item edit-view-bordered" data-field="adjunto_resolution_01_c">
+
+
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_ADJUNTO_RESOLUTION_01">
+
+{minify}
+{capture name="label" assign="label"}{sugar_translate label='LBL_ADJUNTO_RESOLUTION_01' module='Cases'}{/capture}
+{$label|strip_semicolon}:
+
+{/minify}
+</div>
+
+<div class="col-xs-12 col-sm-8 edit-view-field " type="image" field="adjunto_resolution_01_c"  >
+{counter name="panelFieldCount" print=false}
+
+<script type="text/javascript">
+    {literal}
+        $( document ).ready(function() {
+        $( "form#EditView" )
+        .attr( "enctype", "multipart/form-data" )
+        .attr( "encoding", "multipart/form-data" );
+    });
+{/literal}
+</script>
+<script type="text/javascript" src='include/SugarFields/Fields/Image/SugarFieldFile.js?v=efcxeTFrvOwF_p60Kdbgng'></script>
+{if !empty($fields.adjunto_resolution_01_c.value) }
+{assign var=showRemove value=true}
+{else}
+{assign var=showRemove value=false}
+{/if}
+{assign var=noChange value=false}
+<input type="hidden" name="deleteAttachment" value="0">
+<input type="hidden" name="{$fields.adjunto_resolution_01_c.name}" id="{$fields.adjunto_resolution_01_c.name}" value="{$fields.adjunto_resolution_01_c.value}">
+<input type="hidden" name="{$fields.adjunto_resolution_01_c.name}_record_id" id="{$fields.adjunto_resolution_01_c.name}_record_id" value="{$fields.id.value}">
+<span id="{$fields.adjunto_resolution_01_c.name}_old" style="display:{if !$showRemove}none;{/if}">
+<a href="index.php?entryPoint=download&id={$fields.id.value}_{$fields.adjunto_resolution_01_c.name}&type={$module}&time={$fields.date_modified.value}" class="tabDetailViewDFLink">{$fields.adjunto_resolution_01_c.value}</a>
+{if !$noChange}
+<input type='button' class='button' id='remove_button' value='{$APP.LBL_REMOVE}' onclick='SUGAR.field.file.deleteAttachment("{$fields.adjunto_resolution_01_c.name}","",this);'>
+{/if}
+</span>
+{if !$noChange}
+<span id="{$fields.adjunto_resolution_01_c.name}_new" style="display:{if $showRemove}none;{/if}">
+<input type="hidden" name="{$fields.adjunto_resolution_01_c.name}_escaped">
+<input id="{$fields.adjunto_resolution_01_c.name}_file" name="{$fields.adjunto_resolution_01_c.name}_file"
+type="file" title='' size="30"
+maxlength='255'
+>
+{else}
+
+{/if}
+<script type="text/javascript">
+$( "#{$fields.adjunto_resolution_01_c.name}_file{literal} " ).change(function() {
+        $("#{/literal}{$fields.adjunto_resolution_01_c.name}{literal}").val($("#{/literal}{$fields.adjunto_resolution_01_c.name}_file{literal}").val());
+});{/literal}
+        </script>
+</span>
+</div>
+<div class="edit-dotted-border"></div>
+
+<!-- [/hide] -->
+</div>
+
+
+<div class="col-xs-12 col-sm-6 edit-view-row-item edit-view-bordered" data-field="adjunto_resolution_02_c">
+
+
+<div class="col-xs-12 col-sm-4 label" data-label="LBL_ADJUNTO_RESOLUTION_02">
+
+{minify}
+{capture name="label" assign="label"}{sugar_translate label='LBL_ADJUNTO_RESOLUTION_02' module='Cases'}{/capture}
+{$label|strip_semicolon}:
+
+{/minify}
+</div>
+
+<div class="col-xs-12 col-sm-8 edit-view-field " type="image" field="adjunto_resolution_02_c"  >
+{counter name="panelFieldCount" print=false}
+
+<script type="text/javascript">
+    {literal}
+        $( document ).ready(function() {
+        $( "form#EditView" )
+        .attr( "enctype", "multipart/form-data" )
+        .attr( "encoding", "multipart/form-data" );
+    });
+{/literal}
+</script>
+<script type="text/javascript" src='include/SugarFields/Fields/Image/SugarFieldFile.js?v=efcxeTFrvOwF_p60Kdbgng'></script>
+{if !empty($fields.adjunto_resolution_02_c.value) }
+{assign var=showRemove value=true}
+{else}
+{assign var=showRemove value=false}
+{/if}
+{assign var=noChange value=false}
+<input type="hidden" name="deleteAttachment" value="0">
+<input type="hidden" name="{$fields.adjunto_resolution_02_c.name}" id="{$fields.adjunto_resolution_02_c.name}" value="{$fields.adjunto_resolution_02_c.value}">
+<input type="hidden" name="{$fields.adjunto_resolution_02_c.name}_record_id" id="{$fields.adjunto_resolution_02_c.name}_record_id" value="{$fields.id.value}">
+<span id="{$fields.adjunto_resolution_02_c.name}_old" style="display:{if !$showRemove}none;{/if}">
+<a href="index.php?entryPoint=download&id={$fields.id.value}_{$fields.adjunto_resolution_02_c.name}&type={$module}&time={$fields.date_modified.value}" class="tabDetailViewDFLink">{$fields.adjunto_resolution_02_c.value}</a>
+{if !$noChange}
+<input type='button' class='button' id='remove_button' value='{$APP.LBL_REMOVE}' onclick='SUGAR.field.file.deleteAttachment("{$fields.adjunto_resolution_02_c.name}","",this);'>
+{/if}
+</span>
+{if !$noChange}
+<span id="{$fields.adjunto_resolution_02_c.name}_new" style="display:{if $showRemove}none;{/if}">
+<input type="hidden" name="{$fields.adjunto_resolution_02_c.name}_escaped">
+<input id="{$fields.adjunto_resolution_02_c.name}_file" name="{$fields.adjunto_resolution_02_c.name}_file"
+type="file" title='' size="30"
+maxlength='255'
+>
+{else}
+
+{/if}
+<script type="text/javascript">
+$( "#{$fields.adjunto_resolution_02_c.name}_file{literal} " ).change(function() {
+        $("#{/literal}{$fields.adjunto_resolution_02_c.name}{literal}").val($("#{/literal}{$fields.adjunto_resolution_02_c.name}_file{literal}").val());
+});{/literal}
+        </script>
+</span>
+</div>
+<div class="edit-dotted-border"></div>
+
+<!-- [/hide] -->
+</div>
+<div class="clear"></div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -876,8 +1051,8 @@ $(document).ready(function() {ldelim}
 {/literal}{literal}
 <script type="text/javascript">
 addForm('EditView');addToValidate('EditView', 'name', 'name', true,'{/literal}{sugar_translate label='LBL_SUBJECT' module='Cases' for_js=true}{literal}' );
-addToValidate('EditView', 'date_entered_date', 'date', false,'Date Created' );
-addToValidate('EditView', 'date_modified_date', 'date', false,'Date Modified' );
+addToValidate('EditView', 'date_entered_date', 'date', false,'Fecha de creación' );
+addToValidate('EditView', 'date_modified_date', 'date', false,'Fecha de modificación' );
 addToValidate('EditView', 'modified_user_id', 'assigned_user_name', false,'{/literal}{sugar_translate label='LBL_MODIFIED' module='Cases' for_js=true}{literal}' );
 addToValidate('EditView', 'modified_by_name', 'relate', false,'{/literal}{sugar_translate label='LBL_MODIFIED_NAME' module='Cases' for_js=true}{literal}' );
 addToValidate('EditView', 'created_by', 'assigned_user_name', false,'{/literal}{sugar_translate label='LBL_CREATED' module='Cases' for_js=true}{literal}' );
@@ -903,6 +1078,8 @@ addToValidate('EditView', 'contact_created_by_id', 'id', false,'{/literal}{sugar
 addToValidate('EditView', 'update_text', 'text', false,'{/literal}{sugar_translate label='LBL_UPDATE_TEXT' module='Cases' for_js=true}{literal}' );
 addToValidate('EditView', 'internal', 'bool', false,'{/literal}{sugar_translate label='LBL_INTERNAL' module='Cases' for_js=true}{literal}' );
 addToValidate('EditView', 'aop_case_updates_threaded', 'function', false,'{/literal}{sugar_translate label='LBL_AOP_CASE_UPDATES_THREADED' module='Cases' for_js=true}{literal}' );
+addToValidate('EditView', 'adjunto_resolution_01_c', 'image', false,'{/literal}{sugar_translate label='LBL_ADJUNTO_RESOLUTION_01' module='Cases' for_js=true}{literal}' );
+addToValidate('EditView', 'adjunto_resolution_02_c', 'image', false,'{/literal}{sugar_translate label='LBL_ADJUNTO_RESOLUTION_02' module='Cases' for_js=true}{literal}' );
 addToValidate('EditView', 'jjwg_maps_address_c', 'varchar', false,'{/literal}{sugar_translate label='LBL_JJWG_MAPS_ADDRESS' module='Cases' for_js=true}{literal}' );
 addToValidate('EditView', 'jjwg_maps_geocode_status_c', 'varchar', false,'{/literal}{sugar_translate label='LBL_JJWG_MAPS_GEOCODE_STATUS' module='Cases' for_js=true}{literal}' );
 addToValidate('EditView', 'jjwg_maps_lat_c', 'float', false,'{/literal}{sugar_translate label='LBL_JJWG_MAPS_LAT' module='Cases' for_js=true}{literal}' );
@@ -911,4 +1088,4 @@ addToValidate('EditView', 'numero_identidad_c', 'varchar', true,'{/literal}{suga
 addToValidate('EditView', 'photo_c', 'image', false,'{/literal}{sugar_translate label='LBL_PHOTO' module='Cases' for_js=true}{literal}' );
 addToValidateBinaryDependency('EditView', 'assigned_user_name', 'alpha', false,'{/literal}{sugar_translate label='ERR_SQS_NO_MATCH_FIELD' module='Cases' for_js=true}{literal}: {/literal}{sugar_translate label='LBL_ASSIGNED_TO' module='Cases' for_js=true}{literal}', 'assigned_user_id' );
 addToValidateBinaryDependency('EditView', 'account_name', 'alpha', true,'{/literal}{sugar_translate label='ERR_SQS_NO_MATCH_FIELD' module='Cases' for_js=true}{literal}: {/literal}{sugar_translate label='LBL_ACCOUNT_NAME' module='Cases' for_js=true}{literal}', 'account_id' );
-</script><script language="javascript">if(typeof sqs_objects == 'undefined'){var sqs_objects = new Array;}sqs_objects['EditView_account_name']={"form":"EditView","method":"query","modules":["Accounts"],"group":"or","field_list":["name","id"],"populate_list":["EditView_account_name","account_id"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"required_list":["account_id"],"order":"name","limit":"30","no_match_text":"No Match"};sqs_objects['EditView_assigned_user_name']={"form":"EditView","method":"get_user_array","field_list":["user_name","id"],"populate_list":["assigned_user_name","assigned_user_id"],"required_list":["assigned_user_id"],"conditions":[{"name":"user_name","op":"like_custom","end":"%","value":""}],"limit":"30","no_match_text":"No Match"};</script>{/literal}
+</script><script language="javascript">if(typeof sqs_objects == 'undefined'){var sqs_objects = new Array;}sqs_objects['EditView_account_name']={"form":"EditView","method":"query","modules":["Accounts"],"group":"or","field_list":["name","id"],"populate_list":["EditView_account_name","account_id"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"required_list":["account_id"],"order":"name","limit":"30","no_match_text":"Sin coincidencias"};sqs_objects['EditView_assigned_user_name']={"form":"EditView","method":"get_user_array","field_list":["user_name","id"],"populate_list":["assigned_user_name","assigned_user_id"],"required_list":["assigned_user_id"],"conditions":[{"name":"user_name","op":"like_custom","end":"%","value":""}],"limit":"30","no_match_text":"Sin coincidencias"};</script>{/literal}

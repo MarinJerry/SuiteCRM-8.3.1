@@ -1,2 +1,7 @@
-/cache
-/logs
+cache/*
+./logs/*
+logs/prod/*
+public/legacy/cache/*
+public/legacy/config.php
+public/legacy/config_si.php
+.env.local

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.33, created on 2024-09-09 21:24:28
+<?php /* Smarty version 2.6.33, created on 2024-09-13 19:49:46
          compiled from themes%5Csuite8%5Cinclude/EditView/EditView.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_include', 'themes\\suite8\\include/EditView/EditView.tpl', 44, false),array('function', 'counter', 'themes\\suite8\\include/EditView/EditView.tpl', 48, false),array('modifier', 'upper', 'themes\\suite8\\include/EditView/EditView.tpl', 52, false),)), $this); ?>

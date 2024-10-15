@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.33, created on 2024-09-09 21:25:22
+<?php /* Smarty version 2.6.33, created on 2024-09-14 04:12:54
          compiled from cache/themes/suite8/modules/Cases/DetailView.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_include', 'cache/themes/suite8/modules/Cases/DetailView.tpl', 67, false),array('function', 'sugar_translate', 'cache/themes/suite8/modules/Cases/DetailView.tpl', 76, false),array('function', 'counter', 'cache/themes/suite8/modules/Cases/DetailView.tpl', 160, false),array('function', 'sugar_getimage', 'cache/themes/suite8/modules/Cases/DetailView.tpl', 171, false),array('function', 'sugar_ajax_url', 'cache/themes/suite8/modules/Cases/DetailView.tpl', 395, false),array('modifier', 'strip_semicolon', 'cache/themes/suite8/modules/Cases/DetailView.tpl', 153, false),array('modifier', 'url2html', 'cache/themes/suite8/modules/Cases/DetailView.tpl', 508, false),array('modifier', 'nl2br', 'cache/themes/suite8/modules/Cases/DetailView.tpl', 508, false),array('modifier', 'htmlpurify', 'cache/themes/suite8/modules/Cases/DetailView.tpl', 508, false),array('modifier', 'escape', 'cache/themes/suite8/modules/Cases/DetailView.tpl', 508, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_include', 'cache/themes/suite8/modules/Cases/DetailView.tpl', 67, false),array('function', 'sugar_translate', 'cache/themes/suite8/modules/Cases/DetailView.tpl', 76, false),array('function', 'counter', 'cache/themes/suite8/modules/Cases/DetailView.tpl', 177, false),array('function', 'sugar_getimage', 'cache/themes/suite8/modules/Cases/DetailView.tpl', 188, false),array('function', 'sugar_ajax_url', 'cache/themes/suite8/modules/Cases/DetailView.tpl', 374, false),array('modifier', 'strip_semicolon', 'cache/themes/suite8/modules/Cases/DetailView.tpl', 170, false),array('modifier', 'url2html', 'cache/themes/suite8/modules/Cases/DetailView.tpl', 487, false),array('modifier', 'nl2br', 'cache/themes/suite8/modules/Cases/DetailView.tpl', 487, false),array('modifier', 'htmlpurify', 'cache/themes/suite8/modules/Cases/DetailView.tpl', 487, false),array('modifier', 'escape', 'cache/themes/suite8/modules/Cases/DetailView.tpl', 487, false),)), $this); ?>
 
 <div class="detail-border-bottom"></div>
 
@@ -113,10 +113,11 @@ onclick="window.location.href='index.php?module=MergeRecords&action=Step1&record
 
 </a>
 </li>
+
 <?php endif; ?>
 <?php if ($this->_tpl_vars['config']['enable_action_menu'] && $this->_tpl_vars['config']['enable_action_menu'] != false): ?>
 <li id="tab-actions" class="dropdown">
-<a class="dropdown-toggle" data-toggle="dropdown" href="#">ACTIONS<span class="suitepicon suitepicon-action-caret"></span></a>
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">ACCIONES<span class="suitepicon suitepicon-action-caret"></span></a>
 <ul class="dropdown-menu">
 <li><?php if ($this->_tpl_vars['bean']->aclAccess('edit')): ?>
 <input title="<?php echo $this->_tpl_vars['APP']['LBL_EDIT_BUTTON_TITLE']; ?>
@@ -193,6 +194,22 @@ onclick="window.location.href='index.php?module=MergeRecords&action=Step1&record
 
 
 
+
+
+<div class="row detail-view-row">
+
+
+
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="">
+</div>
+
+
+
+
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="">
+</div>
+
+</div>
 
 
 <div class="row detail-view-row">
@@ -333,10 +350,10 @@ onclick="window.location.href='index.php?module=MergeRecords&action=Step1&record
 
 
 
-<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="state">
+<div class="col-xs-12 col-sm-12 detail-view-row-item" data-field="state">
 
 
-<div class="col-xs-12 col-sm-4 label col-1-label">
+<div class="col-xs-12 col-sm-2 label col-1-label">
 
 
 <?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_STATE','module' => 'Cases'), $this);?>
@@ -346,7 +363,7 @@ onclick="window.location.href='index.php?module=MergeRecords&action=Step1&record
 </div>
 
 
-<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="enum" field="state" >
+<div class="col-xs-12 col-sm-10 detail-view-field d-flex inlineEdit" type="enum" field="state" colspan='3'>
 
 <?php if (! $this->_tpl_vars['fields']['state']['hidden']): ?>
 <?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
@@ -364,54 +381,6 @@ onclick="window.location.href='index.php?module=MergeRecords&action=Step1&record
 " value="<?php echo $this->_tpl_vars['fields']['state']['value']; ?>
 ">
 <?php echo $this->_tpl_vars['fields']['state']['options'][$this->_tpl_vars['fields']['state']['value']]; ?>
-
-<?php endif; ?>
-<?php endif; ?>
-
-<div class="inlineEditIcon col-xs-hidden">
-<?php echo smarty_function_sugar_getimage(array('name' => 'pencil'), $this);?>
-
-</div>
-</div>
-<div class="dotted-border"></div>
-
-
-</div>
-
-
-
-
-<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="status">
-
-
-<div class="col-xs-12 col-sm-4 label col-2-label">
-
-
-<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_STATUS','module' => 'Cases'), $this);?>
-<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
-<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
-:
-</div>
-
-
-<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="dynamicenum" field="status" >
-
-<?php if (! $this->_tpl_vars['fields']['status']['hidden']): ?>
-<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
-
-
-
-<?php if (is_string ( $this->_tpl_vars['fields']['status']['options'] )): ?>
-<input type="hidden" class="sugar_field" id="<?php echo $this->_tpl_vars['fields']['status']['name']; ?>
-" value="<?php echo $this->_tpl_vars['fields']['status']['options']; ?>
-">
-<?php echo $this->_tpl_vars['fields']['status']['options']; ?>
-
-<?php else: ?>
-<input type="hidden" class="sugar_field" id="<?php echo $this->_tpl_vars['fields']['status']['name']; ?>
-" value="<?php echo $this->_tpl_vars['fields']['status']['value']; ?>
-">
-<?php echo $this->_tpl_vars['fields']['status']['options'][$this->_tpl_vars['fields']['status']['value']]; ?>
 
 <?php endif; ?>
 <?php endif; ?>
@@ -657,38 +626,13 @@ onclick="window.location.href='index.php?module=MergeRecords&action=Step1&record
 
 
 
-<div class="col-xs-12 col-sm-12 detail-view-row-item" data-field="resolution">
-
-
-<div class="col-xs-12 col-sm-2 label col-1-label">
-
-
-<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_RESOLUTION','module' => 'Cases'), $this);?>
-<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
-<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
-:
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="">
 </div>
 
 
-<div class="col-xs-12 col-sm-10 detail-view-field d-flex inlineEdit" type="text" field="resolution" colspan='3'>
-
-<?php if (! $this->_tpl_vars['fields']['resolution']['hidden']): ?>
-<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
 
 
-<span class="sugar_field" id="<?php echo ((is_array($_tmp=((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['fields']['resolution']['name'])) ? $this->_run_mod_handler('escape', true, $_tmp, 'html') : smarty_modifier_escape($_tmp, 'html')))) ? $this->_run_mod_handler('url2html', true, $_tmp) : url2html($_tmp)))) ? $this->_run_mod_handler('nl2br', true, $_tmp) : smarty_modifier_nl2br($_tmp)); ?>
-"><?php echo ((is_array($_tmp=((is_array($_tmp=((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['fields']['resolution']['value'])) ? $this->_run_mod_handler('escape', true, $_tmp, 'html') : smarty_modifier_escape($_tmp, 'html')))) ? $this->_run_mod_handler('escape', true, $_tmp, 'html_entity_decode') : smarty_modifier_escape($_tmp, 'html_entity_decode')))) ? $this->_run_mod_handler('url2html', true, $_tmp) : url2html($_tmp)))) ? $this->_run_mod_handler('nl2br', true, $_tmp) : smarty_modifier_nl2br($_tmp)); ?>
-</span>
-<?php endif; ?>
-
-<div class="inlineEditIcon col-xs-hidden">
-<?php echo smarty_function_sugar_getimage(array('name' => 'pencil'), $this);?>
-
-</div>
-</div>
-<div class="dotted-border"></div>
-
-
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="">
 </div>
 
 </div>
@@ -991,6 +935,22 @@ _<?php echo $this->_tpl_vars['fields']['photo_c']['name']; ?>
 
 
 
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="">
+</div>
+
+
+
+
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="">
+</div>
+
+</div>
+
+
+<div class="row detail-view-row">
+
+
+
 <div class="col-xs-12 col-sm-12 detail-view-row-item" data-field="numero_identidad_c">
 
 
@@ -1125,10 +1085,10 @@ _<?php echo $this->_tpl_vars['fields']['photo_c']['name']; ?>
 
 
 
-<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="state">
+<div class="col-xs-12 col-sm-12 detail-view-row-item" data-field="state">
 
 
-<div class="col-xs-12 col-sm-4 label col-1-label">
+<div class="col-xs-12 col-sm-2 label col-1-label">
 
 
 <?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_STATE','module' => 'Cases'), $this);?>
@@ -1138,7 +1098,7 @@ _<?php echo $this->_tpl_vars['fields']['photo_c']['name']; ?>
 </div>
 
 
-<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="enum" field="state" >
+<div class="col-xs-12 col-sm-10 detail-view-field d-flex inlineEdit" type="enum" field="state" colspan='3'>
 
 <?php if (! $this->_tpl_vars['fields']['state']['hidden']): ?>
 <?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
@@ -1156,54 +1116,6 @@ _<?php echo $this->_tpl_vars['fields']['photo_c']['name']; ?>
 " value="<?php echo $this->_tpl_vars['fields']['state']['value']; ?>
 ">
 <?php echo $this->_tpl_vars['fields']['state']['options'][$this->_tpl_vars['fields']['state']['value']]; ?>
-
-<?php endif; ?>
-<?php endif; ?>
-
-<div class="inlineEditIcon col-xs-hidden">
-<?php echo smarty_function_sugar_getimage(array('name' => 'pencil'), $this);?>
-
-</div>
-</div>
-<div class="dotted-border"></div>
-
-
-</div>
-
-
-
-
-<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="status">
-
-
-<div class="col-xs-12 col-sm-4 label col-2-label">
-
-
-<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_STATUS','module' => 'Cases'), $this);?>
-<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
-<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
-:
-</div>
-
-
-<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="dynamicenum" field="status" >
-
-<?php if (! $this->_tpl_vars['fields']['status']['hidden']): ?>
-<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
-
-
-
-<?php if (is_string ( $this->_tpl_vars['fields']['status']['options'] )): ?>
-<input type="hidden" class="sugar_field" id="<?php echo $this->_tpl_vars['fields']['status']['name']; ?>
-" value="<?php echo $this->_tpl_vars['fields']['status']['options']; ?>
-">
-<?php echo $this->_tpl_vars['fields']['status']['options']; ?>
-
-<?php else: ?>
-<input type="hidden" class="sugar_field" id="<?php echo $this->_tpl_vars['fields']['status']['name']; ?>
-" value="<?php echo $this->_tpl_vars['fields']['status']['value']; ?>
-">
-<?php echo $this->_tpl_vars['fields']['status']['options'][$this->_tpl_vars['fields']['status']['value']]; ?>
 
 <?php endif; ?>
 <?php endif; ?>
@@ -1449,38 +1361,13 @@ _<?php echo $this->_tpl_vars['fields']['photo_c']['name']; ?>
 
 
 
-<div class="col-xs-12 col-sm-12 detail-view-row-item" data-field="resolution">
-
-
-<div class="col-xs-12 col-sm-2 label col-1-label">
-
-
-<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_RESOLUTION','module' => 'Cases'), $this);?>
-<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
-<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
-:
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="">
 </div>
 
 
-<div class="col-xs-12 col-sm-10 detail-view-field d-flex inlineEdit" type="text" field="resolution" colspan='3'>
-
-<?php if (! $this->_tpl_vars['fields']['resolution']['hidden']): ?>
-<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
 
 
-<span class="sugar_field" id="<?php echo ((is_array($_tmp=((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['fields']['resolution']['name'])) ? $this->_run_mod_handler('escape', true, $_tmp, 'html') : smarty_modifier_escape($_tmp, 'html')))) ? $this->_run_mod_handler('url2html', true, $_tmp) : url2html($_tmp)))) ? $this->_run_mod_handler('nl2br', true, $_tmp) : smarty_modifier_nl2br($_tmp)); ?>
-"><?php echo ((is_array($_tmp=((is_array($_tmp=((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['fields']['resolution']['value'])) ? $this->_run_mod_handler('escape', true, $_tmp, 'html') : smarty_modifier_escape($_tmp, 'html')))) ? $this->_run_mod_handler('escape', true, $_tmp, 'html_entity_decode') : smarty_modifier_escape($_tmp, 'html_entity_decode')))) ? $this->_run_mod_handler('url2html', true, $_tmp) : url2html($_tmp)))) ? $this->_run_mod_handler('nl2br', true, $_tmp) : smarty_modifier_nl2br($_tmp)); ?>
-</span>
-<?php endif; ?>
-
-<div class="inlineEditIcon col-xs-hidden">
-<?php echo smarty_function_sugar_getimage(array('name' => 'pencil'), $this);?>
-
-</div>
-</div>
-<div class="dotted-border"></div>
-
-
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="">
 </div>
 
 </div>
@@ -1731,6 +1618,422 @@ _<?php echo $this->_tpl_vars['fields']['photo_c']['name']; ?>
 
 <span id="assigned_user_id" class="sugar_field" data-id-value="<?php echo $this->_tpl_vars['fields']['assigned_user_id']['value']; ?>
 "><?php echo $this->_tpl_vars['fields']['assigned_user_name']['value']; ?>
+</span>
+<?php endif; ?>
+
+<div class="inlineEditIcon col-xs-hidden">
+<?php echo smarty_function_sugar_getimage(array('name' => 'pencil'), $this);?>
+
+</div>
+</div>
+<div class="dotted-border"></div>
+
+
+</div>
+
+</div>
+                            </div>
+</div>
+</div>
+<?php endif; ?>
+
+
+
+
+
+<?php if ($this->_tpl_vars['config']['enable_action_menu'] && $this->_tpl_vars['config']['enable_action_menu'] != false): ?>
+
+<div class="panel panel-default">
+<div class="panel-heading ">
+<a class="" role="button" data-toggle="collapse" href="#top-panel-0" aria-expanded="false">
+<div class="col-xs-10 col-sm-11 col-md-11">
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_EDITVIEW_PANEL1','module' => 'Cases'), $this);?>
+
+</div>
+</a>
+</div>
+<div class="panel-body panel-collapse collapse in panelContainer" id="top-panel-0"  data-id="LBL_EDITVIEW_PANEL1">
+<div class="tab-content">
+<!-- TAB CONTENT -->
+
+
+
+
+
+<div class="row detail-view-row">
+
+
+
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="status">
+
+
+<div class="col-xs-12 col-sm-4 label col-1-label">
+
+
+<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_STATUS','module' => 'Cases'), $this);?>
+<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
+<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+:
+</div>
+
+
+<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="dynamicenum" field="status" >
+
+<?php if (! $this->_tpl_vars['fields']['status']['hidden']): ?>
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+
+<?php if (is_string ( $this->_tpl_vars['fields']['status']['options'] )): ?>
+<input type="hidden" class="sugar_field" id="<?php echo $this->_tpl_vars['fields']['status']['name']; ?>
+" value="<?php echo $this->_tpl_vars['fields']['status']['options']; ?>
+">
+<?php echo $this->_tpl_vars['fields']['status']['options']; ?>
+
+<?php else: ?>
+<input type="hidden" class="sugar_field" id="<?php echo $this->_tpl_vars['fields']['status']['name']; ?>
+" value="<?php echo $this->_tpl_vars['fields']['status']['value']; ?>
+">
+<?php echo $this->_tpl_vars['fields']['status']['options'][$this->_tpl_vars['fields']['status']['value']]; ?>
+
+<?php endif; ?>
+<?php endif; ?>
+
+<div class="inlineEditIcon col-xs-hidden">
+<?php echo smarty_function_sugar_getimage(array('name' => 'pencil'), $this);?>
+
+</div>
+</div>
+<div class="dotted-border"></div>
+
+
+</div>
+
+
+
+
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="resolution">
+
+
+<div class="col-xs-12 col-sm-4 label col-2-label">
+
+
+<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_RESOLUTION','module' => 'Cases'), $this);?>
+<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
+<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+:
+</div>
+
+
+<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="text" field="resolution" >
+
+<?php if (! $this->_tpl_vars['fields']['resolution']['hidden']): ?>
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<span class="sugar_field" id="<?php echo ((is_array($_tmp=((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['fields']['resolution']['name'])) ? $this->_run_mod_handler('escape', true, $_tmp, 'html') : smarty_modifier_escape($_tmp, 'html')))) ? $this->_run_mod_handler('url2html', true, $_tmp) : url2html($_tmp)))) ? $this->_run_mod_handler('nl2br', true, $_tmp) : smarty_modifier_nl2br($_tmp)); ?>
+"><?php echo ((is_array($_tmp=((is_array($_tmp=((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['fields']['resolution']['value'])) ? $this->_run_mod_handler('escape', true, $_tmp, 'html') : smarty_modifier_escape($_tmp, 'html')))) ? $this->_run_mod_handler('escape', true, $_tmp, 'html_entity_decode') : smarty_modifier_escape($_tmp, 'html_entity_decode')))) ? $this->_run_mod_handler('url2html', true, $_tmp) : url2html($_tmp)))) ? $this->_run_mod_handler('nl2br', true, $_tmp) : smarty_modifier_nl2br($_tmp)); ?>
+</span>
+<?php endif; ?>
+
+<div class="inlineEditIcon col-xs-hidden">
+<?php echo smarty_function_sugar_getimage(array('name' => 'pencil'), $this);?>
+
+</div>
+</div>
+<div class="dotted-border"></div>
+
+
+</div>
+
+</div>
+
+
+<div class="row detail-view-row">
+
+
+
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="adjunto_resolution_01_c">
+
+
+<div class="col-xs-12 col-sm-4 label col-1-label">
+
+
+<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_ADJUNTO_RESOLUTION_01','module' => 'Cases'), $this);?>
+<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
+<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+:
+</div>
+
+
+<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="image" field="adjunto_resolution_01_c" >
+
+<?php if (! $this->_tpl_vars['fields']['adjunto_resolution_01_c']['hidden']): ?>
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<span class="sugar_field" id="<?php echo $this->_tpl_vars['fields']['adjunto_resolution_01_c']['name']; ?>
+">
+<?php if (strlen ( $this->_tpl_vars['fields']['adjunto_resolution_01_c']['value'] ) <= 0): ?>
+<img src="" style="max-width: <?php if (! $this->_tpl_vars['vardef']['width']): ?>120<?php else: ?>200<?php endif; ?>px;" height="<?php if (! $this->_tpl_vars['vardef']['height']): ?><?php else: ?>50<?php endif; ?>">
+<?php else: ?>
+<img src="index.php?entryPoint=download&id=<?php echo $this->_tpl_vars['fields']['id']['value']; ?>
+_<?php echo $this->_tpl_vars['fields']['adjunto_resolution_01_c']['name']; ?>
+<?php echo $this->_tpl_vars['fields']['width']['value']; ?>
+&type=<?php echo $this->_tpl_vars['module']; ?>
+" style="max-width: <?php if (! $this->_tpl_vars['vardef']['width']): ?>120<?php else: ?>200<?php endif; ?>px;" height="<?php if (! $this->_tpl_vars['vardef']['height']): ?><?php else: ?>50<?php endif; ?>">
+<?php endif; ?>
+</span>
+<?php endif; ?>
+
+<div class="inlineEditIcon col-xs-hidden">
+<?php echo smarty_function_sugar_getimage(array('name' => 'pencil'), $this);?>
+
+</div>
+</div>
+<div class="dotted-border"></div>
+
+
+</div>
+
+
+
+
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="adjunto_resolution_02_c">
+
+
+<div class="col-xs-12 col-sm-4 label col-2-label">
+
+
+<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_ADJUNTO_RESOLUTION_02','module' => 'Cases'), $this);?>
+<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
+<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+:
+</div>
+
+
+<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="image" field="adjunto_resolution_02_c" >
+
+<?php if (! $this->_tpl_vars['fields']['adjunto_resolution_02_c']['hidden']): ?>
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<span class="sugar_field" id="<?php echo $this->_tpl_vars['fields']['adjunto_resolution_02_c']['name']; ?>
+">
+<?php if (strlen ( $this->_tpl_vars['fields']['adjunto_resolution_02_c']['value'] ) <= 0): ?>
+<img src="" style="max-width: <?php if (! $this->_tpl_vars['vardef']['width']): ?>120<?php else: ?>200<?php endif; ?>px;" height="<?php if (! $this->_tpl_vars['vardef']['height']): ?><?php else: ?>50<?php endif; ?>">
+<?php else: ?>
+<img src="index.php?entryPoint=download&id=<?php echo $this->_tpl_vars['fields']['id']['value']; ?>
+_<?php echo $this->_tpl_vars['fields']['adjunto_resolution_02_c']['name']; ?>
+<?php echo $this->_tpl_vars['fields']['width']['value']; ?>
+&type=<?php echo $this->_tpl_vars['module']; ?>
+" style="max-width: <?php if (! $this->_tpl_vars['vardef']['width']): ?>120<?php else: ?>200<?php endif; ?>px;" height="<?php if (! $this->_tpl_vars['vardef']['height']): ?><?php else: ?>50<?php endif; ?>">
+<?php endif; ?>
+</span>
+<?php endif; ?>
+
+<div class="inlineEditIcon col-xs-hidden">
+<?php echo smarty_function_sugar_getimage(array('name' => 'pencil'), $this);?>
+
+</div>
+</div>
+<div class="dotted-border"></div>
+
+
+</div>
+
+</div>
+                                </div>
+</div>
+</div>
+<?php else: ?>
+
+<div class="panel panel-default">
+<div class="panel-heading ">
+<a class="" role="button" data-toggle="collapse" href="#top-panel-0" aria-expanded="false">
+<div class="col-xs-10 col-sm-11 col-md-11">
+<?php echo smarty_function_sugar_translate(array('label' => 'LBL_EDITVIEW_PANEL1','module' => 'Cases'), $this);?>
+
+</div>
+</a>
+</div>
+<div class="panel-body panel-collapse collapse in panelContainer" id="top-panel-0" data-id="LBL_EDITVIEW_PANEL1">
+<div class="tab-content">
+<!-- TAB CONTENT -->
+
+
+
+
+
+<div class="row detail-view-row">
+
+
+
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="status">
+
+
+<div class="col-xs-12 col-sm-4 label col-1-label">
+
+
+<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_STATUS','module' => 'Cases'), $this);?>
+<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
+<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+:
+</div>
+
+
+<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="dynamicenum" field="status" >
+
+<?php if (! $this->_tpl_vars['fields']['status']['hidden']): ?>
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+
+<?php if (is_string ( $this->_tpl_vars['fields']['status']['options'] )): ?>
+<input type="hidden" class="sugar_field" id="<?php echo $this->_tpl_vars['fields']['status']['name']; ?>
+" value="<?php echo $this->_tpl_vars['fields']['status']['options']; ?>
+">
+<?php echo $this->_tpl_vars['fields']['status']['options']; ?>
+
+<?php else: ?>
+<input type="hidden" class="sugar_field" id="<?php echo $this->_tpl_vars['fields']['status']['name']; ?>
+" value="<?php echo $this->_tpl_vars['fields']['status']['value']; ?>
+">
+<?php echo $this->_tpl_vars['fields']['status']['options'][$this->_tpl_vars['fields']['status']['value']]; ?>
+
+<?php endif; ?>
+<?php endif; ?>
+
+<div class="inlineEditIcon col-xs-hidden">
+<?php echo smarty_function_sugar_getimage(array('name' => 'pencil'), $this);?>
+
+</div>
+</div>
+<div class="dotted-border"></div>
+
+
+</div>
+
+
+
+
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="resolution">
+
+
+<div class="col-xs-12 col-sm-4 label col-2-label">
+
+
+<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_RESOLUTION','module' => 'Cases'), $this);?>
+<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
+<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+:
+</div>
+
+
+<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="text" field="resolution" >
+
+<?php if (! $this->_tpl_vars['fields']['resolution']['hidden']): ?>
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<span class="sugar_field" id="<?php echo ((is_array($_tmp=((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['fields']['resolution']['name'])) ? $this->_run_mod_handler('escape', true, $_tmp, 'html') : smarty_modifier_escape($_tmp, 'html')))) ? $this->_run_mod_handler('url2html', true, $_tmp) : url2html($_tmp)))) ? $this->_run_mod_handler('nl2br', true, $_tmp) : smarty_modifier_nl2br($_tmp)); ?>
+"><?php echo ((is_array($_tmp=((is_array($_tmp=((is_array($_tmp=((is_array($_tmp=$this->_tpl_vars['fields']['resolution']['value'])) ? $this->_run_mod_handler('escape', true, $_tmp, 'html') : smarty_modifier_escape($_tmp, 'html')))) ? $this->_run_mod_handler('escape', true, $_tmp, 'html_entity_decode') : smarty_modifier_escape($_tmp, 'html_entity_decode')))) ? $this->_run_mod_handler('url2html', true, $_tmp) : url2html($_tmp)))) ? $this->_run_mod_handler('nl2br', true, $_tmp) : smarty_modifier_nl2br($_tmp)); ?>
+</span>
+<?php endif; ?>
+
+<div class="inlineEditIcon col-xs-hidden">
+<?php echo smarty_function_sugar_getimage(array('name' => 'pencil'), $this);?>
+
+</div>
+</div>
+<div class="dotted-border"></div>
+
+
+</div>
+
+</div>
+
+
+<div class="row detail-view-row">
+
+
+
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="adjunto_resolution_01_c">
+
+
+<div class="col-xs-12 col-sm-4 label col-1-label">
+
+
+<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_ADJUNTO_RESOLUTION_01','module' => 'Cases'), $this);?>
+<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
+<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+:
+</div>
+
+
+<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="image" field="adjunto_resolution_01_c" >
+
+<?php if (! $this->_tpl_vars['fields']['adjunto_resolution_01_c']['hidden']): ?>
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<span class="sugar_field" id="<?php echo $this->_tpl_vars['fields']['adjunto_resolution_01_c']['name']; ?>
+">
+<?php if (strlen ( $this->_tpl_vars['fields']['adjunto_resolution_01_c']['value'] ) <= 0): ?>
+<img src="" style="max-width: <?php if (! $this->_tpl_vars['vardef']['width']): ?>120<?php else: ?>200<?php endif; ?>px;" height="<?php if (! $this->_tpl_vars['vardef']['height']): ?><?php else: ?>50<?php endif; ?>">
+<?php else: ?>
+<img src="index.php?entryPoint=download&id=<?php echo $this->_tpl_vars['fields']['id']['value']; ?>
+_<?php echo $this->_tpl_vars['fields']['adjunto_resolution_01_c']['name']; ?>
+<?php echo $this->_tpl_vars['fields']['width']['value']; ?>
+&type=<?php echo $this->_tpl_vars['module']; ?>
+" style="max-width: <?php if (! $this->_tpl_vars['vardef']['width']): ?>120<?php else: ?>200<?php endif; ?>px;" height="<?php if (! $this->_tpl_vars['vardef']['height']): ?><?php else: ?>50<?php endif; ?>">
+<?php endif; ?>
+</span>
+<?php endif; ?>
+
+<div class="inlineEditIcon col-xs-hidden">
+<?php echo smarty_function_sugar_getimage(array('name' => 'pencil'), $this);?>
+
+</div>
+</div>
+<div class="dotted-border"></div>
+
+
+</div>
+
+
+
+
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="adjunto_resolution_02_c">
+
+
+<div class="col-xs-12 col-sm-4 label col-2-label">
+
+
+<?php ob_start(); ?><?php echo smarty_function_sugar_translate(array('label' => 'LBL_ADJUNTO_RESOLUTION_02','module' => 'Cases'), $this);?>
+<?php $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean(); ?>
+<?php echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+:
+</div>
+
+
+<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="image" field="adjunto_resolution_02_c" >
+
+<?php if (! $this->_tpl_vars['fields']['adjunto_resolution_02_c']['hidden']): ?>
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount','print' => false), $this);?>
+
+
+<span class="sugar_field" id="<?php echo $this->_tpl_vars['fields']['adjunto_resolution_02_c']['name']; ?>
+">
+<?php if (strlen ( $this->_tpl_vars['fields']['adjunto_resolution_02_c']['value'] ) <= 0): ?>
+<img src="" style="max-width: <?php if (! $this->_tpl_vars['vardef']['width']): ?>120<?php else: ?>200<?php endif; ?>px;" height="<?php if (! $this->_tpl_vars['vardef']['height']): ?><?php else: ?>50<?php endif; ?>">
+<?php else: ?>
+<img src="index.php?entryPoint=download&id=<?php echo $this->_tpl_vars['fields']['id']['value']; ?>
+_<?php echo $this->_tpl_vars['fields']['adjunto_resolution_02_c']['name']; ?>
+<?php echo $this->_tpl_vars['fields']['width']['value']; ?>
+&type=<?php echo $this->_tpl_vars['module']; ?>
+" style="max-width: <?php if (! $this->_tpl_vars['vardef']['width']): ?>120<?php else: ?>200<?php endif; ?>px;" height="<?php if (! $this->_tpl_vars['vardef']['height']): ?><?php else: ?>50<?php endif; ?>">
+<?php endif; ?>
 </span>
 <?php endif; ?>
 

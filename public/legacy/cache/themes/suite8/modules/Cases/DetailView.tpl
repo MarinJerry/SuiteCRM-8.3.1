@@ -79,10 +79,11 @@ onclick="window.location.href='index.php?module=MergeRecords&action=Step1&record
 {sugar_translate label='LBL_CASE_INFORMATION' module='Cases'}
 </a>
 </li>
+
 {/if}
 {if $config.enable_action_menu and $config.enable_action_menu != false}
 <li id="tab-actions" class="dropdown">
-<a class="dropdown-toggle" data-toggle="dropdown" href="#">ACTIONS<span class="suitepicon suitepicon-action-caret"></span></a>
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">ACCIONES<span class="suitepicon suitepicon-action-caret"></span></a>
 <ul class="dropdown-menu">
 <li>{if $bean->aclAccess("edit")}
 <input title="{$APP.LBL_EDIT_BUTTON_TITLE}"
@@ -137,6 +138,22 @@ onclick="window.location.href='index.php?module=MergeRecords&action=Step1&record
 
 
 
+
+
+<div class="row detail-view-row">
+
+
+
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="">
+</div>
+
+
+
+
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="">
+</div>
+
+</div>
 
 
 <div class="row detail-view-row">
@@ -256,10 +273,10 @@ onclick="window.location.href='index.php?module=MergeRecords&action=Step1&record
 
 
 
-<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="state">
+<div class="col-xs-12 col-sm-12 detail-view-row-item" data-field="state">
 
 
-<div class="col-xs-12 col-sm-4 label col-1-label">
+<div class="col-xs-12 col-sm-2 label col-1-label">
 
 
 {capture name="label" assign="label"}{sugar_translate label='LBL_STATE' module='Cases'}{/capture}
@@ -267,7 +284,7 @@ onclick="window.location.href='index.php?module=MergeRecords&action=Step1&record
 </div>
 
 
-<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="enum" field="state" >
+<div class="col-xs-12 col-sm-10 detail-view-field d-flex inlineEdit" type="enum" field="state" colspan='3'>
 
 {if !$fields.state.hidden}
 {counter name="panelFieldCount" print=false}
@@ -279,44 +296,6 @@ onclick="window.location.href='index.php?module=MergeRecords&action=Step1&record
 {else}
 <input type="hidden" class="sugar_field" id="{$fields.state.name}" value="{ $fields.state.value }">
 { $fields.state.options[$fields.state.value]}
-{/if}
-{/if}
-
-<div class="inlineEditIcon col-xs-hidden">
-{sugar_getimage name="pencil"}
-</div>
-</div>
-<div class="dotted-border"></div>
-
-
-</div>
-
-
-
-
-<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="status">
-
-
-<div class="col-xs-12 col-sm-4 label col-2-label">
-
-
-{capture name="label" assign="label"}{sugar_translate label='LBL_STATUS' module='Cases'}{/capture}
-{$label|strip_semicolon}:
-</div>
-
-
-<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="dynamicenum" field="status" >
-
-{if !$fields.status.hidden}
-{counter name="panelFieldCount" print=false}
-
-
-{if is_string($fields.status.options)}
-<input type="hidden" class="sugar_field" id="{$fields.status.name}" value="{ $fields.status.options }">
-{ $fields.status.options }
-{else}
-<input type="hidden" class="sugar_field" id="{$fields.status.name}" value="{ $fields.status.value }">
-{ $fields.status.options[$fields.status.value]}
 {/if}
 {/if}
 
@@ -524,32 +503,13 @@ onclick="window.location.href='index.php?module=MergeRecords&action=Step1&record
 
 
 
-<div class="col-xs-12 col-sm-12 detail-view-row-item" data-field="resolution">
-
-
-<div class="col-xs-12 col-sm-2 label col-1-label">
-
-
-{capture name="label" assign="label"}{sugar_translate label='LBL_RESOLUTION' module='Cases'}{/capture}
-{$label|strip_semicolon}:
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="">
 </div>
 
 
-<div class="col-xs-12 col-sm-10 detail-view-field d-flex inlineEdit" type="text" field="resolution" colspan='3'>
-
-{if !$fields.resolution.hidden}
-{counter name="panelFieldCount" print=false}
-
-<span class="sugar_field" id="{$fields.resolution.name|escape:'html'|url2html|nl2br}">{$fields.resolution.value|escape:'html'|escape:'html_entity_decode'|url2html|nl2br}</span>
-{/if}
-
-<div class="inlineEditIcon col-xs-hidden">
-{sugar_getimage name="pencil"}
-</div>
-</div>
-<div class="dotted-border"></div>
 
 
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="">
 </div>
 
 </div>
@@ -813,6 +773,22 @@ onclick="window.location.href='index.php?module=MergeRecords&action=Step1&record
 
 
 
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="">
+</div>
+
+
+
+
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="">
+</div>
+
+</div>
+
+
+<div class="row detail-view-row">
+
+
+
 <div class="col-xs-12 col-sm-12 detail-view-row-item" data-field="numero_identidad_c">
 
 
@@ -926,10 +902,10 @@ onclick="window.location.href='index.php?module=MergeRecords&action=Step1&record
 
 
 
-<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="state">
+<div class="col-xs-12 col-sm-12 detail-view-row-item" data-field="state">
 
 
-<div class="col-xs-12 col-sm-4 label col-1-label">
+<div class="col-xs-12 col-sm-2 label col-1-label">
 
 
 {capture name="label" assign="label"}{sugar_translate label='LBL_STATE' module='Cases'}{/capture}
@@ -937,7 +913,7 @@ onclick="window.location.href='index.php?module=MergeRecords&action=Step1&record
 </div>
 
 
-<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="enum" field="state" >
+<div class="col-xs-12 col-sm-10 detail-view-field d-flex inlineEdit" type="enum" field="state" colspan='3'>
 
 {if !$fields.state.hidden}
 {counter name="panelFieldCount" print=false}
@@ -949,44 +925,6 @@ onclick="window.location.href='index.php?module=MergeRecords&action=Step1&record
 {else}
 <input type="hidden" class="sugar_field" id="{$fields.state.name}" value="{ $fields.state.value }">
 { $fields.state.options[$fields.state.value]}
-{/if}
-{/if}
-
-<div class="inlineEditIcon col-xs-hidden">
-{sugar_getimage name="pencil"}
-</div>
-</div>
-<div class="dotted-border"></div>
-
-
-</div>
-
-
-
-
-<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="status">
-
-
-<div class="col-xs-12 col-sm-4 label col-2-label">
-
-
-{capture name="label" assign="label"}{sugar_translate label='LBL_STATUS' module='Cases'}{/capture}
-{$label|strip_semicolon}:
-</div>
-
-
-<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="dynamicenum" field="status" >
-
-{if !$fields.status.hidden}
-{counter name="panelFieldCount" print=false}
-
-
-{if is_string($fields.status.options)}
-<input type="hidden" class="sugar_field" id="{$fields.status.name}" value="{ $fields.status.options }">
-{ $fields.status.options }
-{else}
-<input type="hidden" class="sugar_field" id="{$fields.status.name}" value="{ $fields.status.value }">
-{ $fields.status.options[$fields.status.value]}
 {/if}
 {/if}
 
@@ -1194,32 +1132,13 @@ onclick="window.location.href='index.php?module=MergeRecords&action=Step1&record
 
 
 
-<div class="col-xs-12 col-sm-12 detail-view-row-item" data-field="resolution">
-
-
-<div class="col-xs-12 col-sm-2 label col-1-label">
-
-
-{capture name="label" assign="label"}{sugar_translate label='LBL_RESOLUTION' module='Cases'}{/capture}
-{$label|strip_semicolon}:
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="">
 </div>
 
 
-<div class="col-xs-12 col-sm-10 detail-view-field d-flex inlineEdit" type="text" field="resolution" colspan='3'>
-
-{if !$fields.resolution.hidden}
-{counter name="panelFieldCount" print=false}
-
-<span class="sugar_field" id="{$fields.resolution.name|escape:'html'|url2html|nl2br}">{$fields.resolution.value|escape:'html'|escape:'html_entity_decode'|url2html|nl2br}</span>
-{/if}
-
-<div class="inlineEditIcon col-xs-hidden">
-{sugar_getimage name="pencil"}
-</div>
-</div>
-<div class="dotted-border"></div>
 
 
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="">
 </div>
 
 </div>
@@ -1434,6 +1353,352 @@ onclick="window.location.href='index.php?module=MergeRecords&action=Step1&record
 {counter name="panelFieldCount" print=false}
 
 <span id="assigned_user_id" class="sugar_field" data-id-value="{$fields.assigned_user_id.value}">{$fields.assigned_user_name.value}</span>
+{/if}
+
+<div class="inlineEditIcon col-xs-hidden">
+{sugar_getimage name="pencil"}
+</div>
+</div>
+<div class="dotted-border"></div>
+
+
+</div>
+
+</div>
+                            </div>
+</div>
+</div>
+{/if}
+
+
+
+
+
+{if $config.enable_action_menu and $config.enable_action_menu != false}
+
+<div class="panel panel-default">
+<div class="panel-heading ">
+<a class="" role="button" data-toggle="collapse" href="#top-panel-0" aria-expanded="false">
+<div class="col-xs-10 col-sm-11 col-md-11">
+{sugar_translate label='LBL_EDITVIEW_PANEL1' module='Cases'}
+</div>
+</a>
+</div>
+<div class="panel-body panel-collapse collapse in panelContainer" id="top-panel-0"  data-id="LBL_EDITVIEW_PANEL1">
+<div class="tab-content">
+<!-- TAB CONTENT -->
+
+
+
+
+
+<div class="row detail-view-row">
+
+
+
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="status">
+
+
+<div class="col-xs-12 col-sm-4 label col-1-label">
+
+
+{capture name="label" assign="label"}{sugar_translate label='LBL_STATUS' module='Cases'}{/capture}
+{$label|strip_semicolon}:
+</div>
+
+
+<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="dynamicenum" field="status" >
+
+{if !$fields.status.hidden}
+{counter name="panelFieldCount" print=false}
+
+
+{if is_string($fields.status.options)}
+<input type="hidden" class="sugar_field" id="{$fields.status.name}" value="{ $fields.status.options }">
+{ $fields.status.options }
+{else}
+<input type="hidden" class="sugar_field" id="{$fields.status.name}" value="{ $fields.status.value }">
+{ $fields.status.options[$fields.status.value]}
+{/if}
+{/if}
+
+<div class="inlineEditIcon col-xs-hidden">
+{sugar_getimage name="pencil"}
+</div>
+</div>
+<div class="dotted-border"></div>
+
+
+</div>
+
+
+
+
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="resolution">
+
+
+<div class="col-xs-12 col-sm-4 label col-2-label">
+
+
+{capture name="label" assign="label"}{sugar_translate label='LBL_RESOLUTION' module='Cases'}{/capture}
+{$label|strip_semicolon}:
+</div>
+
+
+<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="text" field="resolution" >
+
+{if !$fields.resolution.hidden}
+{counter name="panelFieldCount" print=false}
+
+<span class="sugar_field" id="{$fields.resolution.name|escape:'html'|url2html|nl2br}">{$fields.resolution.value|escape:'html'|escape:'html_entity_decode'|url2html|nl2br}</span>
+{/if}
+
+<div class="inlineEditIcon col-xs-hidden">
+{sugar_getimage name="pencil"}
+</div>
+</div>
+<div class="dotted-border"></div>
+
+
+</div>
+
+</div>
+
+
+<div class="row detail-view-row">
+
+
+
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="adjunto_resolution_01_c">
+
+
+<div class="col-xs-12 col-sm-4 label col-1-label">
+
+
+{capture name="label" assign="label"}{sugar_translate label='LBL_ADJUNTO_RESOLUTION_01' module='Cases'}{/capture}
+{$label|strip_semicolon}:
+</div>
+
+
+<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="image" field="adjunto_resolution_01_c" >
+
+{if !$fields.adjunto_resolution_01_c.hidden}
+{counter name="panelFieldCount" print=false}
+
+<span class="sugar_field" id="{$fields.adjunto_resolution_01_c.name}">
+{if strlen($fields.adjunto_resolution_01_c.value) <= 0}
+<img src="" style="max-width: {if !$vardef.width}120{else}200{/if}px;" height="{if !$vardef.height}{else}50{/if}">
+{else}
+<img src="index.php?entryPoint=download&id={$fields.id.value}_{$fields.adjunto_resolution_01_c.name}{$fields.width.value}&type={$module}" style="max-width: {if !$vardef.width}120{else}200{/if}px;" height="{if !$vardef.height}{else}50{/if}">
+{/if}
+</span>
+{/if}
+
+<div class="inlineEditIcon col-xs-hidden">
+{sugar_getimage name="pencil"}
+</div>
+</div>
+<div class="dotted-border"></div>
+
+
+</div>
+
+
+
+
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="adjunto_resolution_02_c">
+
+
+<div class="col-xs-12 col-sm-4 label col-2-label">
+
+
+{capture name="label" assign="label"}{sugar_translate label='LBL_ADJUNTO_RESOLUTION_02' module='Cases'}{/capture}
+{$label|strip_semicolon}:
+</div>
+
+
+<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="image" field="adjunto_resolution_02_c" >
+
+{if !$fields.adjunto_resolution_02_c.hidden}
+{counter name="panelFieldCount" print=false}
+
+<span class="sugar_field" id="{$fields.adjunto_resolution_02_c.name}">
+{if strlen($fields.adjunto_resolution_02_c.value) <= 0}
+<img src="" style="max-width: {if !$vardef.width}120{else}200{/if}px;" height="{if !$vardef.height}{else}50{/if}">
+{else}
+<img src="index.php?entryPoint=download&id={$fields.id.value}_{$fields.adjunto_resolution_02_c.name}{$fields.width.value}&type={$module}" style="max-width: {if !$vardef.width}120{else}200{/if}px;" height="{if !$vardef.height}{else}50{/if}">
+{/if}
+</span>
+{/if}
+
+<div class="inlineEditIcon col-xs-hidden">
+{sugar_getimage name="pencil"}
+</div>
+</div>
+<div class="dotted-border"></div>
+
+
+</div>
+
+</div>
+                                </div>
+</div>
+</div>
+{else}
+
+<div class="panel panel-default">
+<div class="panel-heading ">
+<a class="" role="button" data-toggle="collapse" href="#top-panel-0" aria-expanded="false">
+<div class="col-xs-10 col-sm-11 col-md-11">
+{sugar_translate label='LBL_EDITVIEW_PANEL1' module='Cases'}
+</div>
+</a>
+</div>
+<div class="panel-body panel-collapse collapse in panelContainer" id="top-panel-0" data-id="LBL_EDITVIEW_PANEL1">
+<div class="tab-content">
+<!-- TAB CONTENT -->
+
+
+
+
+
+<div class="row detail-view-row">
+
+
+
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="status">
+
+
+<div class="col-xs-12 col-sm-4 label col-1-label">
+
+
+{capture name="label" assign="label"}{sugar_translate label='LBL_STATUS' module='Cases'}{/capture}
+{$label|strip_semicolon}:
+</div>
+
+
+<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="dynamicenum" field="status" >
+
+{if !$fields.status.hidden}
+{counter name="panelFieldCount" print=false}
+
+
+{if is_string($fields.status.options)}
+<input type="hidden" class="sugar_field" id="{$fields.status.name}" value="{ $fields.status.options }">
+{ $fields.status.options }
+{else}
+<input type="hidden" class="sugar_field" id="{$fields.status.name}" value="{ $fields.status.value }">
+{ $fields.status.options[$fields.status.value]}
+{/if}
+{/if}
+
+<div class="inlineEditIcon col-xs-hidden">
+{sugar_getimage name="pencil"}
+</div>
+</div>
+<div class="dotted-border"></div>
+
+
+</div>
+
+
+
+
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="resolution">
+
+
+<div class="col-xs-12 col-sm-4 label col-2-label">
+
+
+{capture name="label" assign="label"}{sugar_translate label='LBL_RESOLUTION' module='Cases'}{/capture}
+{$label|strip_semicolon}:
+</div>
+
+
+<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="text" field="resolution" >
+
+{if !$fields.resolution.hidden}
+{counter name="panelFieldCount" print=false}
+
+<span class="sugar_field" id="{$fields.resolution.name|escape:'html'|url2html|nl2br}">{$fields.resolution.value|escape:'html'|escape:'html_entity_decode'|url2html|nl2br}</span>
+{/if}
+
+<div class="inlineEditIcon col-xs-hidden">
+{sugar_getimage name="pencil"}
+</div>
+</div>
+<div class="dotted-border"></div>
+
+
+</div>
+
+</div>
+
+
+<div class="row detail-view-row">
+
+
+
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="adjunto_resolution_01_c">
+
+
+<div class="col-xs-12 col-sm-4 label col-1-label">
+
+
+{capture name="label" assign="label"}{sugar_translate label='LBL_ADJUNTO_RESOLUTION_01' module='Cases'}{/capture}
+{$label|strip_semicolon}:
+</div>
+
+
+<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="image" field="adjunto_resolution_01_c" >
+
+{if !$fields.adjunto_resolution_01_c.hidden}
+{counter name="panelFieldCount" print=false}
+
+<span class="sugar_field" id="{$fields.adjunto_resolution_01_c.name}">
+{if strlen($fields.adjunto_resolution_01_c.value) <= 0}
+<img src="" style="max-width: {if !$vardef.width}120{else}200{/if}px;" height="{if !$vardef.height}{else}50{/if}">
+{else}
+<img src="index.php?entryPoint=download&id={$fields.id.value}_{$fields.adjunto_resolution_01_c.name}{$fields.width.value}&type={$module}" style="max-width: {if !$vardef.width}120{else}200{/if}px;" height="{if !$vardef.height}{else}50{/if}">
+{/if}
+</span>
+{/if}
+
+<div class="inlineEditIcon col-xs-hidden">
+{sugar_getimage name="pencil"}
+</div>
+</div>
+<div class="dotted-border"></div>
+
+
+</div>
+
+
+
+
+<div class="col-xs-12 col-sm-6 detail-view-row-item detail-view-bordered" data-field="adjunto_resolution_02_c">
+
+
+<div class="col-xs-12 col-sm-4 label col-2-label">
+
+
+{capture name="label" assign="label"}{sugar_translate label='LBL_ADJUNTO_RESOLUTION_02' module='Cases'}{/capture}
+{$label|strip_semicolon}:
+</div>
+
+
+<div class="col-xs-12 col-sm-8 detail-view-field d-flex inlineEdit" type="image" field="adjunto_resolution_02_c" >
+
+{if !$fields.adjunto_resolution_02_c.hidden}
+{counter name="panelFieldCount" print=false}
+
+<span class="sugar_field" id="{$fields.adjunto_resolution_02_c.name}">
+{if strlen($fields.adjunto_resolution_02_c.value) <= 0}
+<img src="" style="max-width: {if !$vardef.width}120{else}200{/if}px;" height="{if !$vardef.height}{else}50{/if}">
+{else}
+<img src="index.php?entryPoint=download&id={$fields.id.value}_{$fields.adjunto_resolution_02_c.name}{$fields.width.value}&type={$module}" style="max-width: {if !$vardef.width}120{else}200{/if}px;" height="{if !$vardef.height}{else}50{/if}">
+{/if}
+</span>
 {/if}
 
 <div class="inlineEditIcon col-xs-hidden">

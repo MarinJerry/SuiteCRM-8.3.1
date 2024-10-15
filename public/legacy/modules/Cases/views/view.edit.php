@@ -52,7 +52,7 @@ class CasesViewEdit extends ViewEdit
     {
         parent::display();
 
-        $newScript = '';
+       $newScript = "";
 
         if (empty($this->bean->id)) {
             $newScript = "
@@ -61,7 +61,25 @@ class CasesViewEdit extends ViewEdit
                     $('#internal').closest('.edit-view-row-item').hide();
                     $('#internal_label').closest('.edit-view-row-item').hide();
                     $('#addFileButton').closest('.edit-view-row-item').hide();
-                    $('#case_update_form_label').closest('.edit-view-row-item').hide();";
+                    $('#case_update_form_label').closest('.edit-view-row-item').hide();
+            ";
+         }else{
+            $newScript = "
+                var dni = $('#numero_identidad_c').val();
+
+                $.ajax({
+                    url: 'http://192.168.210.32:8080/ords/ws_choroqa/afl/get_afiliado?id='+dni,
+                    type: 'GET',                         
+                    dataType: 'json',                    
+                    success: function(data) {   
+                                  
+                        console.log(data);                 
+                    },
+                    error: function(error) {     
+                        console.error('Error:', error);
+                    }
+                });
+            ";
          }
 
          echo '<script>$(document).ready(function(){' . $newScript . '})</script>';
